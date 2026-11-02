@@ -103,7 +103,7 @@ douyin-to-transcript/
 ├── requirements.txt              # 依赖声明
 ├── config.example.env            # 配置模板（占位符，无密钥）
 ├── .gitignore
-├── references/                   # 详细实现（SKILL.md 用 @references/xxx.md 引用）
+├── references/                   # 详细实现（SKILL.md 用 @references/ 引用各 .md）
 │   ├── transcribe.md             # 取流 + 转写的完整链路与三个坑
 │   ├── polish.md                 # 润色规则详解（词表、断句规则、局限）
 │   ├── troubleshooting.md        # 排错清单

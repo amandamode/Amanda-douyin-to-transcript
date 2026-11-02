@@ -13,7 +13,7 @@ examples_en:
 - "Turn this Douyin link into a transcript: https://v.douyin.com/XXXXXX/"
 - "What does this video say? Give me the text"
 - "Polish this transcript: drop the filler words and fix the punctuation"
-version: 1.0.0
+version: 1.0.1
 author: Amanda
 allowed-tools: Bash, Read
 ---
@@ -27,7 +27,7 @@ allowed-tools: Bash, Read
 | 项 | 值 |
 |---|---|
 | 技能标识 | `douyin-to-transcript` |
-| 版本 | 1.0.0 |
+| 版本 | 1.0.1 |
 | 作者 | Amanda |
 | 许可证 | MIT |
 | 仓库 | 待建（GitHub 仓库名建议 `Amanda-douyin-to-transcript`） |
