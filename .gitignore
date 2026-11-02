@@ -1,0 +1,55 @@
+# ── 构建产物（打包用的 zip 不进源码仓库）────────────────────────
+*.zip
+
+# ── Python ───────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# ── 模型与本地缓存（faster-whisper 权重很大，绝不提交）────────────
+.cache/
+huggingface/
+models/
+*.bin
+*.safetensors
+
+# ── 运行时中间产物（音视频、逐字稿、成稿）────────────────────────
+*.mp4
+*.wav
+*.m4a
+*.mp3
+audio.wav
+video.mp4
+stream_result.json
+transcript_raw.json
+transcript_raw.txt
+article_raw.html
+可粘贴版.html
+images/
+cover*.jpg
+cover_src.jpg
+!templates/article_raw.html
+
+# ── 凭证（任何形态的密钥都不得进仓库）────────────────────────────
+*.env
+!*.env.example
+*.env.*
+!*.env.example
+!config.example.env
+config.local.env
+secrets/
+
+# ── 编辑器与系统 ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~

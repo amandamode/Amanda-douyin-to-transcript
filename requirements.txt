@@ -1,0 +1,22 @@
+# ── scripts/grab_stream.py ─────────────────────────────────────────────
+# 在真实浏览器内取抖音媒体流地址。
+# 抖音已封死分享页与开放接口（_ROUTER_DATA 无 playAddr / iteminfo 返回空 /
+# detail 被 ArgusSecurityPlugin 拦），只能在页面里执行 JS 才能拿到流地址。
+# 脚本用 channel="chrome" 驱动系统已安装的 Google Chrome，
+# 因此【不需要】执行 `playwright install` 下载浏览器内核。
+playwright>=1.40
+
+# ── scripts/transcribe.py ──────────────────────────────────────────────
+# 本地语音识别（ASR）。CPU + int8 即可跑，small 模型约 460MB。
+# 首次下载建议挂镜像：HF_ENDPOINT=https://hf-mirror.com
+# 模型已缓存时可用 HF_HUB_OFFLINE=1 完全离线运行。
+faster-whisper>=1.0
+
+# ── scripts/polish.py ──────────────────────────────────────────────────
+# 仅使用 Python 标准库（规则式润色，无需任何第三方依赖）。
+
+# ── 系统依赖（不通过 pip 安装）──────────────────────────────────────────
+# ffmpeg           音频转码：
+#                  ffmpeg -i video.mp4 -vn -ac 1 -ar 16000 -c:a pcm_s16le audio.wav
+# Google Chrome    抓流所需（macOS 默认路径 /Applications/Google Chrome.app）
+#                  headless 容易被抖音风控，脚本默认 headed
